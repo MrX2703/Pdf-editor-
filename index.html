@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Editor</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+    canvas { border: 1px solid #ccc; margin-top: 10px; }
+    .toolbar { margin-bottom: 15px; }
+    .toolbar button, input { margin: 5px; padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h1>PDF Editor</h1>
+  <div class="toolbar">
+    <input type="file" id="upload" accept="application/pdf">
+    <input type="text" id="text-input" placeholder="Enter text">
+    <button id="add-text">Add Text</button>
+    <button id="rotate-page">Rotate Page</button>
+    <button id="merge-pdf">Merge PDFs</button>
+    <button id="split-pdf">Split PDF</button>
+    <button id="add-signature">Add Signature</button>
+    <button id="add-password">Protect PDF</button>
+    <button id="download">Download PDF</button>
+  </div>
+  <canvas id="pdf-render"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
